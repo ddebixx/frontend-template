@@ -1,0 +1,26 @@
+---
+description: Vitest and Playwright BDD testing conventions
+globs: "**/*.{test,spec}.{ts,tsx}"
+alwaysApply: false
+---
+
+# Testing
+
+Pyramid: many unit tests, few e2e happy paths.
+
+Unit: Vitest + Testing Library, colocated `*.test.ts(x)`.
+E2E: Playwright under `e2e/[domain]/`.
+
+Structure tests as Given / When / Then:
+
+```ts
+describe('<Button />', () => {
+  describe('when clicked', () => {
+    it('calls the handler', () => {
+      /* arrange / act / assert */
+    });
+  });
+});
+```
+
+Details: `docs/frontend/conventions/TESTING_CONVENTION.md`, `docs/frontend/tools/TESTING.md`

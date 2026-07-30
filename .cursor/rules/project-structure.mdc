@@ -1,0 +1,17 @@
+---
+description: Project folder layout for Vite and Next.js variants
+globs: src/**/*,e2e/**/*
+alwaysApply: false
+---
+
+# Project structure
+
+- Domain UI → `src/components/[domain]/`
+- Shared UI (≥2 domains) → `src/components/shared/`
+- API clients → `src/services/[api-name]/{client,schemas,utils}`
+- Global utils/types/constants → `src/utils`, `src/types`, `src/constants`
+- E2E → `e2e/[domain]/[path].spec.ts`
+- Next.js routes → `src/app/`; Vite screens → `src/pages/`
+
+Do not call Tanstack Query/fetch directly from components — go through `services/`.
+Details: `docs/frontend/conventions/PROJECT_STRUCTURE.md`

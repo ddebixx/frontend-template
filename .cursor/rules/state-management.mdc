@@ -1,0 +1,18 @@
+---
+description: When to use Context vs Zustand
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# State
+
+Default to `useState` + Context for simple shared state.
+
+Use **Zustand** only when:
+- Context re-renders hurt performance
+- State must persist
+- Middleware is required
+- Global state has many actions
+
+Justify Zustand in the PR description.
+Details: `docs/frontend/tools/STATE_MANAGEMENT.md`

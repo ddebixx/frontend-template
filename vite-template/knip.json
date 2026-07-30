@@ -1,0 +1,17 @@
+{
+  "entry": [
+    "src/pages/**/*.{ts,tsx}",
+    "src/**/*.{test,spec}.{ts,tsx}",
+    "e2e/**/*.ts",
+    "index.html"
+  ],
+  "project": ["src/**/*.{ts,tsx,js,jsx}", "e2e/**/*.ts"],
+  "ignore": [
+    "src/components/**",
+    "src/services/**",
+    "src/constants/**",
+    "src/types/**",
+    "src/utils/**"
+  ],
+  "ignoreDependencies": ["zod", "zustand", "tailwind-merge", "lint-staged"]
+}

@@ -1,0 +1,18 @@
+---
+description: Core frontend stack and quality gates for this template
+alwaysApply: true
+---
+
+# Stack & DoD
+
+This repo is a **Next.js App Router** or **Vite + React** frontend template.
+
+Defaults: TypeScript strict, Tailwind, Biome, Knip, Vitest, Playwright, Tanstack Query + Zod.
+State: Context/`useState` first; Zustand only when justified.
+No Storybook in this template.
+
+Before finishing work:
+- Prefer existing folders under `src/` / `e2e/`
+- Keep lint/types/tests green
+- Validate API data with Zod in `services/`
+- See `docs/frontend/INDEX.md` for full standards

@@ -1,0 +1,14 @@
+---
+description: Naming conventions for files, folders, and symbols
+globs: src/**/*,e2e/**/*
+alwaysApply: false
+---
+
+# Naming
+
+- `camelCase` — functions, variables, hooks (`useDebounce.ts`)
+- `PascalCase` — React components and their folders (`UserCard/UserCard.tsx`)
+- `kebab-case` — non-component folders and assets (`user-profile/`, `arrow-right.svg`)
+
+Component files: `ComponentName.tsx`, `ComponentName.test.ts`, optional `.types.ts` / `.constants.ts`.
+Details: `docs/frontend/conventions/NAMING.md`

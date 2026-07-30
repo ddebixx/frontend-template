@@ -1,0 +1,13 @@
+---
+description: React patterns for Vite and Next.js App Router
+globs: "**/*.{tsx,jsx}"
+alwaysApply: false
+---
+
+# React
+
+- Functional components only
+- Next.js: Server Components by default; `"use client"` only when required
+- Tailwind utilities first; avoid bespoke CSS unless necessary
+
+Escalate shared interactive logic into hooks under the component or `src/utils` when reused.

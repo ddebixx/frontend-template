@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Builds
+**/dist/
+**/.next/
+**/out/
+**/build/
+**/coverage/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Logs / OS
+*.log
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+**/next-env.d.ts
+
+# Tooling caches
+.fallow/
+**/.turbo/
+**/.vercel/
+
+# Playwright
+**/test-results/
+**/playwright-report/
+**/blob-report/

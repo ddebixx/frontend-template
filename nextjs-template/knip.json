@@ -1,0 +1,22 @@
+{
+  "entry": [
+    "src/app/**/{page,layout,loading,error,not-found,route,default}.{ts,tsx}",
+    "src/**/*.{test,spec}.{ts,tsx}",
+    "e2e/**/*.ts"
+  ],
+  "project": ["src/**/*.{ts,tsx,js,jsx}", "e2e/**/*.ts"],
+  "ignore": [
+    "src/components/**",
+    "src/services/**",
+    "src/constants/**",
+    "src/types/**",
+    "src/utils/**"
+  ],
+  "ignoreDependencies": [
+    "@vitejs/plugin-react",
+    "zod",
+    "zustand",
+    "tailwind-merge",
+    "lint-staged"
+  ]
+}

@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist
+
+# testing
+/coverage
+/test-results/
+/playwright-report/
+
+# misc
+.DS_Store
+*.pem
+*.log
+.env*
+!.env.example
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.fallow/

@@ -1,0 +1,20 @@
+---
+description: Tanstack Query clients and Zod validation for API layers
+globs: src/services/**/*
+alwaysApply: false
+---
+
+# API communication
+
+- One Tanstack Query client per API under `services/[api-name]/client/`
+- Interceptors for auth and error normalization
+- Zod schemas in `services/[api-name]/schemas/`
+- Export types via `z.infer<typeof Schema>`
+- Never trust raw response shapes in UI code
+
+```ts
+const UserSchema = z.object({ id: z.string(), name: z.string() });
+export type User = z.infer<typeof UserSchema>;
+```
+
+Details: `docs/frontend/tools/API_COMMUNICATION.md`

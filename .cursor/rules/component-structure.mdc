@@ -1,0 +1,22 @@
+---
+description: Component folder encapsulation and minimization
+globs: src/components/**/*
+alwaysApply: false
+---
+
+# Components
+
+1. Encapsulate component-only types/utils/constants inside the component folder
+2. Create files only when needed
+3. Nest subcomponents to mirror the UI tree
+
+```txt
+ComponentName/
+  ComponentName.tsx
+  ComponentName.test.ts
+  utils/            # optional
+  SubComponent/     # optional
+```
+
+Prefer named exports. Keep presentational UI separate from service calls.
+Details: `docs/frontend/conventions/COMPONENT_STRUCTURE.md`
