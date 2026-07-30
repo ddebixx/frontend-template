@@ -23,5 +23,5 @@ ComponentName/
 ## Notes
 
 - Prefer named exports for components
-- Keep UI presentational; put data fetching behind services/hooks
+- Keep UI presentational; put data fetching behind `hooks/` / `fetchers/`
 - Colocate unit tests next to the unit under test

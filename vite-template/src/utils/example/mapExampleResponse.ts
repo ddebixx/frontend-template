@@ -1,4 +1,7 @@
-import type { Example, ExampleApiResponse } from "../schemas/exampleSchema";
+import type {
+  Example,
+  ExampleApiResponse,
+} from "@/fetchers/example/exampleSchema";
 
 export const mapExampleResponse = (response: ExampleApiResponse): Example => {
   return {

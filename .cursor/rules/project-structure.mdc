@@ -8,10 +8,11 @@ alwaysApply: false
 
 - Domain UI → `src/components/[domain]/`
 - Shared UI (≥2 domains) → `src/components/shared/`
-- API clients → `src/services/[api-name]/{client,schemas,utils}`
-- Global utils/types/constants → `src/utils`, `src/types`, `src/constants`
+- HTTP + Zod → `src/fetchers/[domain]/`
+- Tanstack Query hooks → `src/hooks/[domain]/` (usable from components)
+- Global utils/types/constants → `src/utils`, `src/types`, `src/constants` (`utils` usable from components)
 - E2E → `e2e/[domain]/[path].spec.ts`
 - Next.js routes → `src/app/`; Vite screens → `src/pages/`
 
-Do not call Tanstack Query/fetch directly from components — go through `services/`.
+Do not call Tanstack Query/`fetch` directly from components — go through `hooks` / `fetchers`.
 Details: `docs/frontend/conventions/PROJECT_STRUCTURE.md`

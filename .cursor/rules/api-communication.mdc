@@ -1,14 +1,14 @@
 ---
-description: Tanstack Query clients and Zod validation for API layers
-globs: src/services/**/*
+description: Fetchers, Tanstack Query hooks, and Zod validation for API layers
+globs: src/fetchers/**/*,src/hooks/**/*
 alwaysApply: false
 ---
 
 # API communication
 
-- One Tanstack Query client per API under `services/[api-name]/client/`
-- Interceptors for auth and error normalization
-- Zod schemas in `services/[api-name]/schemas/`
+- Fetchers under `fetchers/[domain]/` — typed HTTP + Zod schemas/parse, no React
+- Hooks under `hooks/[domain]/` — Tanstack Query wrapping fetchers; components may import them
+- Pure mapping/helpers under `utils/[domain]/` — usable from fetchers and components
 - Export types via `z.infer<typeof Schema>`
 - Never trust raw response shapes in UI code
 

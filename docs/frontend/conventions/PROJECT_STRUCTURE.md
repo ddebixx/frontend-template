@@ -4,7 +4,8 @@
 
 - Domain code stays separated from shared/global code
 - Reusable code is easy to find
-- API clients are encapsulated (no ad-hoc `Tanstack Query`/`fetch` in UI)
+- API access is encapsulated (no ad-hoc `Tanstack Query`/`fetch` in UI)
+- `hooks/` and `utils/` are shared helpers — components may import them
 
 ## Vite + React layout
 
@@ -20,11 +21,13 @@ src/
       [ComponentName]/
     [domain-name]/                # Domain-only UI
       [ComponentName]/
-  services/
-    [api-name]/
-      schemas/
-      client/
-      utils/
+  fetchers/
+    [domain-name]/
+      getSomething.ts
+      somethingSchema.ts
+  hooks/
+    [domain-name]/
+      useSomethingQuery.ts
   constants/
     [domain-name].ts
   types/
@@ -54,11 +57,10 @@ src/
       [ComponentName]/
     [domain-name]/
       [ComponentName]/
-  services/
-    [api-name]/
-      schemas/
-      client/
-      utils/
+  fetchers/
+    [domain-name]/
+  hooks/
+    [domain-name]/
   constants/
   types/
   utils/
@@ -68,6 +70,7 @@ src/
 ## Hard rules
 
 - Promote to `components/shared/` only when used by **≥2 domains**
-- Pages/routes call into `services/[api-name]/` — they don’t create HTTP clients
+- Pages/routes use `hooks/` (or call `fetchers/` from server code) — they don’t create HTTP clients or Query instances
+- Components may use `hooks/` and `utils/` — they must not call `fetch` or build Query options inline
 - Shared utils/types/constants live under `src/utils`, `src/types`, `src/constants`
 - Don’t invent new top-level folders without documenting them in this file

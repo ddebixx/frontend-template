@@ -2,8 +2,8 @@ import {
   type Example,
   ExampleApiResponseSchema,
   ExampleSchema,
-} from "../schemas/exampleSchema";
-import { mapExampleResponse } from "../utils/mapExampleResponse";
+} from "@/fetchers/example/exampleSchema";
+import { mapExampleResponse } from "@/utils/example/mapExampleResponse";
 
 export const getExample = async (exampleId: string): Promise<Example> => {
   try {
@@ -21,6 +21,6 @@ export const getExample = async (exampleId: string): Promise<Example> => {
   } catch (error) {
     throw error instanceof Error
       ? error
-      : new Error("Unexpected example-api client failure");
+      : new Error("Unexpected example fetcher failure");
   }
 };

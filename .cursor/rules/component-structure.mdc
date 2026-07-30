@@ -18,5 +18,5 @@ ComponentName/
   SubComponent/     # optional
 ```
 
-Prefer named exports. Keep presentational UI separate from service calls.
+Prefer named exports. Keep presentational UI separate from hooks/fetchers.
 Details: `docs/frontend/conventions/COMPONENT_STRUCTURE.md`

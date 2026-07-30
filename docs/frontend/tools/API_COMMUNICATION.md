@@ -1,16 +1,19 @@
 # API communication
 
-## HTTP
+## Layers
 
-Use **Tanstack Query** via an encapsulated client in `src/services/[api-name]/client/`.
+| Layer | Path | Role |
+| --- | --- | --- |
+| Fetchers | `src/fetchers/[domain]/` | HTTP + Zod schemas/parse (no React) |
+| Hooks | `src/hooks/[domain]/` | Tanstack Query wrapping fetchers; usable from components |
+| Utils | `src/utils/[domain]/` | Pure helpers (mapping, formatting); usable from fetchers and components |
 
-- Interceptors for auth / error normalization
-- UI never constructs raw Tanstack Query instances
+UI never calls `fetch` or constructs Query options inline — use a hook (client) or a fetcher (server).
 
 ## Validation
 
 Validate responses with **Zod**.
 
-- Schemas in `src/services/[api-name]/schemas/`
+- Schemas live next to fetchers in `src/fetchers/[domain]/`
 - Derive types with `z.infer<typeof Schema>`
 - Don’t trust API shapes at runtime without parsing

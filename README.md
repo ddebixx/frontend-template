@@ -7,7 +7,7 @@ One repo with **standards + two ready templates** (Next.js App Router and Vite +
 Give open-source / greenfield frontends a shared baseline:
 
 - folder layout and naming
-- API clients behind `services/` + Zod
+- API via `fetchers/` + `hooks/` + Zod
 - Biome, Fallow, Vitest, Playwright, Husky
 
 So teams skip scaffolding debates and start consistent.
@@ -42,7 +42,7 @@ npm run dev
 | `check` | lint + types + unit + Fallow |
 | `prepare` | Husky (Biome on staged files via lint-staged) |
 
-Minimal `example` samples under `src/components`, `src/services`, etc. show the layout — replace them with your product code.
+Minimal `example` samples under `src/components`, `src/fetchers`, `src/hooks`, etc. show the layout — replace them with your product code.
 
 ## Standards
 
