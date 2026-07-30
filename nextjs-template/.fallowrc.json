@@ -6,11 +6,11 @@
     "e2e/**/*.ts"
   ],
   "ignoreFindings": [
-    "src/components/**",
-    "src/services/**",
-    "src/constants/**",
-    "src/types/**",
-    "src/utils/**"
+    "src/components/example/**",
+    "src/services/example-api/**",
+    "src/constants/example.ts",
+    "src/types/example.ts",
+    "src/utils/example/**"
   ],
   "ignoreDependencies": [
     "@vitejs/plugin-react",
