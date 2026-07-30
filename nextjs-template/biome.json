@@ -13,7 +13,8 @@
       "!.next",
       "!dist",
       "!coverage",
-      "!public/**/*.svg"
+      "!public/**/*.svg",
+      "!src/components/ui"
     ]
   },
   "formatter": {

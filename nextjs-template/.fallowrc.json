@@ -7,8 +7,10 @@
   ],
   "ignoreFindings": [
     "src/components/example/**",
+    "src/components/ui/**",
     "src/fetchers/example/**",
     "src/hooks/example/**",
+    "src/lib/utils.ts",
     "src/constants/example.ts",
     "src/types/example.ts",
     "src/utils/example/**"

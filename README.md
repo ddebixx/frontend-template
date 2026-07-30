@@ -42,7 +42,7 @@ npm run dev
 | `check` | lint + types + unit + Fallow |
 | `prepare` | Husky (Biome on staged files via lint-staged) |
 
-Minimal `example` samples under `src/components`, `src/fetchers`, `src/hooks`, etc. show the layout — replace them with your product code.
+Minimal `example` samples under `src/components`, `src/fetchers`, `src/hooks`, etc. show the layout — replace them with your product code. shadcn primitives live in `src/components/ui/`.
 
 ## Standards
 

@@ -6,10 +6,12 @@ alwaysApply: false
 
 # Project structure
 
+- shadcn UI → `src/components/ui/` (primitives only)
 - Domain UI → `src/components/[domain]/`
 - Shared UI (≥2 domains) → `src/components/shared/`
 - HTTP + Zod → `src/fetchers/[domain]/`
 - Tanstack Query hooks → `src/hooks/[domain]/` (usable from components)
+- shadcn `cn` → `src/lib/utils.ts`
 - Global utils/types/constants → `src/utils`, `src/types`, `src/constants` (`utils` usable from components)
 - E2E → `e2e/[domain]/[path].spec.ts`
 - Next.js routes → `src/app/`; Vite screens → `src/pages/`

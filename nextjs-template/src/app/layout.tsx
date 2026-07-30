@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Fraunces, Geist, Source_Sans_3 } from "next/font/google";
 import { AppProviders } from "@/components/shared/AppProviders/AppProviders";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -26,7 +29,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${sourceSans.variable} h-full antialiased`}
+      className={cn(
+        "h-full",
+        "antialiased",
+        fraunces.variable,
+        sourceSans.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <body className="flex min-h-full flex-col">
         <AppProviders>{children}</AppProviders>

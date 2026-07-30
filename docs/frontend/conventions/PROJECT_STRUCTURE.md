@@ -17,6 +17,7 @@ e2e/
 src/
   pages/                         # Route-level screens
   components/
+    ui/                          # shadcn/ui primitives (generated)
     shared/                      # Reused across domains
       [ComponentName]/
     [domain-name]/                # Domain-only UI
@@ -28,6 +29,8 @@ src/
   hooks/
     [domain-name]/
       useSomethingQuery.ts
+  lib/
+    utils.ts                     # shadcn `cn` helper
   constants/
     [domain-name].ts
   types/
@@ -53,6 +56,7 @@ e2e/
 src/
   app/                           # Routes, layouts, server components
   components/
+    ui/                          # shadcn/ui primitives (generated)
     shared/
       [ComponentName]/
     [domain-name]/
@@ -61,6 +65,8 @@ src/
     [domain-name]/
   hooks/
     [domain-name]/
+  lib/
+    utils.ts
   constants/
   types/
   utils/
@@ -70,6 +76,7 @@ src/
 ## Hard rules
 
 - Promote to `components/shared/` only when used by **≥2 domains**
+- Keep product UI out of `components/ui/` — that folder is for shadcn primitives only
 - Pages/routes use `hooks/` (or call `fetchers/` from server code) — they don’t create HTTP clients or Query instances
 - Components may use `hooks/` and `utils/` — they must not call `fetch` or build Query options inline
 - Shared utils/types/constants live under `src/utils`, `src/types`, `src/constants`
