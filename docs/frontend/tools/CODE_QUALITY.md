@@ -6,15 +6,17 @@
 
 If a fork keeps ESLint + Prettier, document that choice in the README — don’t run both stacks on the same files.
 
-## Unused code
+## Unused code & health
 
-**Knip** for unused exports, dependencies, and dead files. Wire it into `check`.
+**Fallow** for unused exports/deps/files, plus optional deeper checks (`fallow dupes`, `fallow health`). Wire `fallow dead-code` into `check`.
+
+Config: `.fallowrc.json`. Cache lives in `.fallow/` (gitignored).
 
 ## Automation
 
-- Pre-commit hooks (Husky + lint-staged or equivalent) for format/lint on staged files
+- Pre-commit hooks (Husky + lint-staged) for Biome on staged files
 - CI must fail on: build, lint, typecheck, unit, e2e
-- Aggregate script: `pnpm check` / `npm run check`
+- Aggregate script: `pnpm check` / `npm run check` (includes Fallow)
 
 ## Definition of done (PR)
 
@@ -22,4 +24,4 @@ If a fork keeps ESLint + Prettier, document that choice in the README — don’
 - [ ] TypeScript clean
 - [ ] Unit tests updated
 - [ ] E2E happy path if user flow changed
-- [ ] Knip clean (or justified exceptions)
+- [ ] Fallow clean (or justified exceptions)

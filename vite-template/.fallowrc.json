@@ -1,17 +1,20 @@
 {
+  "$schema": "./node_modules/fallow/schema.json",
   "entry": [
     "src/pages/**/*.{ts,tsx}",
     "src/**/*.{test,spec}.{ts,tsx}",
     "e2e/**/*.ts",
     "index.html"
   ],
-  "project": ["src/**/*.{ts,tsx,js,jsx}", "e2e/**/*.ts"],
-  "ignore": [
+  "ignoreFindings": [
     "src/components/**",
     "src/services/**",
     "src/constants/**",
     "src/types/**",
     "src/utils/**"
   ],
-  "ignoreDependencies": ["zod", "zustand", "tailwind-merge", "lint-staged"]
+  "ignoreDependencies": ["zod", "zustand", "tailwind-merge", "lint-staged"],
+  "rules": {
+    "dev-dependencies-in-production": "off"
+  }
 }

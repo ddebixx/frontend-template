@@ -7,7 +7,7 @@ alwaysApply: false
 # React
 
 - Functional components only
-- Next.js: Server Components by default; `"use client"` only when required
+- Next.js: Server Components for static pages; `"use client"` when required
 - Tailwind utilities first; avoid bespoke CSS unless necessary
 
 Escalate shared interactive logic into hooks under the component or `src/utils` when reused.

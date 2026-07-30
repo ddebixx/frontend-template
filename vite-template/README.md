@@ -8,4 +8,4 @@ npm run dev
 npm run check
 ```
 
-Edit `src/pages/App.tsx`. Shared scripts: `lint`, `format`, `typecheck`, `test`, `test:e2e`, `knip`.
+Edit `src/pages/App.tsx`. Shared scripts: `lint`, `format`, `typecheck`, `test`, `test:e2e`, `fallow`.

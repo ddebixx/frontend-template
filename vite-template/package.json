@@ -12,8 +12,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "knip": "knip",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run knip",
+    "fallow": "fallow dead-code",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run fallow",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -43,9 +43,9 @@
     "@vitejs/plugin-react": "^6.0.3",
     "autoprefixer": "^10.4.21",
     "babel-plugin-react-compiler": "^1.0.0",
+    "fallow": "^3.10.0",
     "husky": "^9.1.7",
     "jsdom": "^26.1.0",
-    "knip": "^6.29.0",
     "lint-staged": "^16.1.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",

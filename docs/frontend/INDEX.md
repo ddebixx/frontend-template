@@ -2,8 +2,6 @@
 
 Standards for this open-source frontend template family (**Next.js App Router** or **Vite + React**).
 
-They are adapted from common production conventions (structure, naming, testing, quality gates) and tuned for this stack — not a 1:1 copy of any org-specific handbook.
-
 ## Stack (template defaults)
 
 | Layer | Choice |
@@ -15,7 +13,7 @@ They are adapted from common production conventions (structure, naming, testing,
 | App variants | **Next.js** (App Router) **or** **Vite + React** |
 | Styling | Tailwind CSS |
 | Lint + format | Biome |
-| Unused code | Knip |
+| Unused code | Fallow |
 | Unit tests | Vitest + Testing Library |
 | E2E | Playwright |
 | HTTP | Tanstack Query |
@@ -45,4 +43,4 @@ They are adapted from common production conventions (structure, naming, testing,
 Every template variant should expose:
 
 - `dev` / `build` / `lint` / `typecheck` / `test` / `test:e2e` / `check`
-- `check` runs lint + typecheck + unit tests (and Knip if configured)
+- `check` runs lint + typecheck + unit tests + Fallow

@@ -1,5 +1,5 @@
 ---
-description: Biome, Knip, and CI quality expectations
+description: Biome, Fallow, and CI quality expectations
 globs: "**/*.{ts,tsx,js,jsx,json}"
 alwaysApply: false
 ---
@@ -7,7 +7,7 @@ alwaysApply: false
 # Code quality
 
 - Format/lint with **Biome** (don’t mix ESLint+Prettier on the same tree unless documented)
-- Run **Knip** for unused exports/deps as part of `check`
+- Run **Fallow** (`fallow dead-code`) for unused exports/deps as part of `check`
 - No unexplained `any` or `@ts-ignore`
 - Keep `build`, `lint`, `typecheck`, `test`, `test:e2e` green in CI
 

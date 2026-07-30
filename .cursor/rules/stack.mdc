@@ -7,7 +7,7 @@ alwaysApply: true
 
 This repo is a **Next.js App Router** or **Vite + React** frontend template.
 
-Defaults: TypeScript strict, Tailwind, Biome, Knip, Vitest, Playwright, Tanstack Query + Zod.
+Defaults: TypeScript strict, Tailwind, Biome, Fallow, Vitest, Playwright, Tanstack Query + Zod.
 State: Context/`useState` first; Zustand only when justified.
 No Storybook in this template.
 

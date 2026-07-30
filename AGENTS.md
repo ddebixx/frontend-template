@@ -4,7 +4,7 @@ Condensed rules for AI agents and contributors. Full docs: `docs/frontend/INDEX.
 
 ## Stack
 
-Next.js App Router **or** Vite + React · TypeScript strict · Tailwind · Biome · Knip · Vitest · Playwright · Tanstack Query · Zod · Context first, Zustand when needed.
+Next.js App Router **or** Vite + React · TypeScript strict · Tailwind · Biome · Fallow · Vitest · Playwright · Tanstack Query · Zod · Context first, Zustand when needed.
 
 **Not in template:** Storybook.
 

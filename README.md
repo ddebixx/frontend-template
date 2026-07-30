@@ -8,7 +8,7 @@ Give open-source / greenfield frontends a shared baseline:
 
 - folder layout and naming
 - API clients behind `services/` + Zod
-- Biome, Knip, Vitest, Playwright, Husky
+- Biome, Fallow, Vitest, Playwright, Husky
 
 So teams skip scaffolding debates and start consistent.
 
@@ -39,7 +39,7 @@ npm run dev
 | `lint` / `format` | Biome |
 | `typecheck` | TypeScript |
 | `test` / `test:e2e` | Vitest / Playwright |
-| `check` | lint + types + unit + Knip |
+| `check` | lint + types + unit + Fallow |
 | `prepare` | Husky (Biome on staged files via lint-staged) |
 
 Starter example domains under `src/components`, `src/services`, etc. show the layout — replace them with your product code.
@@ -48,6 +48,6 @@ Starter example domains under `src/components`, `src/services`, etc. show the la
 
 Start at [`docs/frontend/INDEX.md`](docs/frontend/INDEX.md).
 
-**Stack defaults:** TypeScript strict · Tailwind · Biome · Knip · Vitest · Playwright · Tanstack Query · Zod · Context/`useState` first (Zustand when needed). No Storybook in this pack.
+**Stack defaults:** TypeScript strict · Tailwind · Biome · Fallow · Vitest · Playwright · Tanstack Query · Zod · Context/`useState` first (Zustand when needed). No Storybook in this pack.
 
 Copy `docs/frontend/`, `.cursor/rules/`, and optionally `AGENTS.md` into a project that is not forked from these templates.

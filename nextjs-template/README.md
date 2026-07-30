@@ -8,4 +8,4 @@ npm run dev   # http://localhost:3000
 npm run check
 ```
 
-Edit `src/app/page.tsx`. Shared scripts: `lint`, `format`, `typecheck`, `test`, `test:e2e`, `knip`.
+Edit `src/app/page.tsx`. Shared scripts: `lint`, `format`, `typecheck`, `test`, `test:e2e`, `fallow`.
