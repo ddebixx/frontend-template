@@ -1,9 +1,7 @@
 import { ExamplePanel } from "@/components/example/ExamplePanel/ExamplePanel";
-import { EXAMPLE_DEFAULT_LABEL } from "@/constants/example";
-import { formatLabel } from "@/utils/example/formatLabel";
+
+import { EXAMPLE_SECTION_TITLE } from "./ExampleSection.constants";
 
 export const ExampleSection = () => {
-  const title = formatLabel(EXAMPLE_DEFAULT_LABEL);
-
-  return <ExamplePanel title={title} />;
+  return <ExamplePanel title={EXAMPLE_SECTION_TITLE} />;
 };

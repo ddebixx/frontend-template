@@ -1,21 +1,25 @@
 ---
-description: Component folder encapsulation and minimization
-globs: src/components/**/*
+description: Component folder encapsulation; types and constants outside the component file
+globs: src/components/**/*,src/features/**/*
 alwaysApply: false
 ---
 
 # Components
 
 1. Encapsulate component-only types/utils/constants inside the component folder
-2. Create files only when needed
-3. Nest subcomponents to mirror the UI tree
+2. Keep `ComponentName.tsx` UI-only — export types from `ComponentName.types.ts`, constants from `ComponentName.constants.ts`
+3. Create sibling files only when they have content
+4. Nest subcomponents to mirror the UI tree
+5. Same layout applies under `src/features/`
 
 ```txt
 ComponentName/
   ComponentName.tsx
+  ComponentName.types.ts
+  ComponentName.constants.ts   # omit if none
   ComponentName.test.ts
-  utils/            # optional
-  SubComponent/     # optional
+  utils/                       # optional
+  SubComponent/                # optional
 ```
 
 Prefer named exports. Keep presentational UI in `components/`; compose and wire data in `features/`.

@@ -26,6 +26,9 @@ src/
   features/
     [domain-name]/                # Feature modules (compose UI + wire hooks/actions)
       [FeatureName]/
+        FeatureName.tsx
+        FeatureName.types.ts       # omit if none
+        FeatureName.constants.ts   # omit if none
   fetchers/
     [domain-name]/
       getSomething.ts
@@ -68,6 +71,9 @@ src/
   features/
     [domain-name]/
       [FeatureName]/
+        FeatureName.tsx
+        FeatureName.types.ts
+        FeatureName.constants.ts
   fetchers/
     [domain-name]/
   hooks/

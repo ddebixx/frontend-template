@@ -26,6 +26,7 @@ camelCase functions/hooks · PascalCase components · kebab-case other folders/a
 ## Components
 
 Encapsulate · minimize files · mirror tree. Named exports preferred.
+Keep `ComponentName.tsx` / `FeatureName.tsx` UI-only — types in `*.types.ts`, constants in `*.constants.ts`.
 
 ## Tests
 

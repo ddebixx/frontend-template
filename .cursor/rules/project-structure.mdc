@@ -9,7 +9,7 @@ alwaysApply: false
 - shadcn UI → `src/components/ui/` (primitives only)
 - Domain presentational UI → `src/components/[domain]/`
 - Shared UI (≥2 domains) → `src/components/shared/`
-- Feature modules → `src/features/[domain]/` (compose UI, wire hooks / server actions)
+- Feature modules → `src/features/[domain]/` (same `*.types.ts` / `*.constants.ts` layout as components)
 - HTTP + Zod → `src/fetchers/[domain]/`
 - Tanstack Query hooks → `src/hooks/[domain]/` (usable from components and features)
 - shadcn `cn` → `src/lib/utils.ts`

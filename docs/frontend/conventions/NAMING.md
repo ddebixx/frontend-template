@@ -14,5 +14,7 @@
 | Component folder | `PascalCase` | `UserProfileCard/` |
 | Other folders | `kebab-case` | `utils/`, `schemas/` |
 | Component file | `PascalCase.*.ext` | `UserProfileCard.tsx` |
+| Component types | `PascalCase.types.ts` | `UserProfileCard.types.ts` |
+| Component constants | `PascalCase.constants.ts` | `UserProfileCard.constants.ts` |
 | Asset | `kebab-case.ext` | `arrow-right.svg` |
 | Util / hook | `camelCase.ext` | `formatCurrency.ts`, `useDebounce.ts` |
