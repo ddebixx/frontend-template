@@ -7,14 +7,15 @@ alwaysApply: false
 # Project structure
 
 - shadcn UI → `src/components/ui/` (primitives only)
-- Domain UI → `src/components/[domain]/`
+- Domain presentational UI → `src/components/[domain]/`
 - Shared UI (≥2 domains) → `src/components/shared/`
+- Feature modules → `src/features/[domain]/` (compose UI, wire hooks / server actions)
 - HTTP + Zod → `src/fetchers/[domain]/`
-- Tanstack Query hooks → `src/hooks/[domain]/` (usable from components)
+- Tanstack Query hooks → `src/hooks/[domain]/` (usable from components and features)
 - shadcn `cn` → `src/lib/utils.ts`
-- Global utils/types/constants → `src/utils`, `src/types`, `src/constants` (`utils` usable from components)
+- Global utils/types/constants → `src/utils`, `src/types`, `src/constants` (`utils` usable from components/features)
 - E2E → `e2e/[domain]/[path].spec.ts`
 - Next.js routes → `src/app/`; Vite screens → `src/pages/`
 
-Do not call Tanstack Query/`fetch` directly from components — go through `hooks` / `fetchers`.
+Do not call Tanstack Query/`fetch` directly from components — go through `hooks` / `fetchers` (usually via a feature).
 Details: `docs/frontend/conventions/PROJECT_STRUCTURE.md`

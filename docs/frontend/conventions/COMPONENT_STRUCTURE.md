@@ -22,6 +22,6 @@ ComponentName/
 
 ## Notes
 
-- Prefer named exports for components
-- Keep UI presentational; put data fetching behind `hooks/` / `fetchers/`
+- Keep UI presentational; put data fetching behind `hooks/` / `fetchers/` (usually via `features/`)
+- Feature modules live under `src/features/[domain]/` and compose presentational components
 - Colocate unit tests next to the unit under test

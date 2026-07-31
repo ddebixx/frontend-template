@@ -18,5 +18,5 @@ ComponentName/
   SubComponent/     # optional
 ```
 
-Prefer named exports. Keep presentational UI separate from hooks/fetchers.
+Prefer named exports. Keep presentational UI in `components/`; compose and wire data in `features/`.
 Details: `docs/frontend/conventions/COMPONENT_STRUCTURE.md`

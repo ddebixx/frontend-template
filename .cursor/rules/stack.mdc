@@ -12,7 +12,7 @@ State: Context/`useState` first; Zustand only when justified.
 No Storybook in this template.
 
 Before finishing work:
-- Prefer existing folders under `src/` / `e2e/`
+- Prefer existing folders under `src/` / `e2e/` (`features/`, `components/`, `fetchers/`, `hooks/`, …)
 - Keep lint/types/tests green
 - Validate API data with Zod in `fetchers/`
 - See `docs/frontend/INDEX.md` for full standards

@@ -11,9 +11,10 @@ Next.js App Router **or** Vite + React · TypeScript strict · Tailwind · Biome
 ## Structure
 
 - `components/ui` → shadcn primitives only
-- `components/[domain]` vs `components/shared` (≥2 domains)
+- `components/[domain]` vs `components/shared` (≥2 domains) — presentational
+- `features/[domain]` → feature modules (compose UI, wire hooks / server actions)
 - API: `fetchers/[domain]` (HTTP + Zod) + `hooks/[domain]` (Tanstack Query)
-- `hooks/` and `utils/` may be used by components
+- `hooks/` and `utils/` may be used by components and features
 - `lib/utils.ts` → shadcn `cn` helper
 - E2E in `e2e/[domain]`
 - Next routes in `src/app`; Vite screens in `src/pages`
