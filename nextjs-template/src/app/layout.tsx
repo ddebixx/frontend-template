@@ -1,7 +1,7 @@
 import { Fraunces, Geist, Source_Sans_3 } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
-import { AppProviders } from "@/components/shared/AppProviders/AppProviders";
+import { AppProviders } from "@/providers/AppProviders/AppProviders";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 

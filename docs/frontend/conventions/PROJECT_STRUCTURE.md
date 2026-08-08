@@ -7,6 +7,7 @@
 - API access is encapsulated (no ad-hoc `Tanstack Query`/`fetch` in UI)
 - `hooks/` and `utils/` are shared helpers — components may import them
 - `components/` stay presentational; `features/` compose UI and wire data/actions
+- `providers/` hold Context and other app-wide React providers
 
 ## Vite + React layout
 
@@ -36,6 +37,10 @@ src/
   hooks/
     [domain-name]/
       useSomethingQuery.ts
+  providers/                     # Context + app-wide React providers
+    AppProviders/
+      AppProviders.tsx
+      AppProviders.types.ts
   lib/
     utils.ts                     # shadcn `cn` helper
   i18n/                          # locale config / wiring
@@ -80,6 +85,10 @@ src/
     [domain-name]/
   hooks/
     [domain-name]/
+  providers/
+    AppProviders/
+      AppProviders.tsx
+      AppProviders.types.ts
   lib/
     utils.ts
   i18n/
@@ -96,6 +105,8 @@ src/
 - Keep product UI out of `components/ui/` — that folder is for shadcn primitives only
 - `components/` = presentational only (no fetch / Query / business orchestration)
 - `features/` = feature modules — compose components, use hooks/utils, Next server actions when needed
+- `providers/` = React Context and app-wide providers (Query, theme, auth session UI, …) — not presentational UI
+- Compose root providers in `AppProviders`; mount once from the app entry (`layout.tsx` / `main.tsx`)
 - Pages/routes render features (or call `fetchers/` from server code) — they don’t create HTTP clients or Query instances
 - Components may use `hooks/` and `utils/` — they must not call `fetch` or build Query options inline
 - Shared utils/types/constants live under `src/utils`, `src/types`, `src/constants`

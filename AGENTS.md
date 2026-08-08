@@ -14,6 +14,7 @@ Next.js App Router **or** Vite + React · TypeScript strict · Tailwind + `cn`/`
 - `components/[domain]` vs `components/shared` (≥2 domains) — presentational
 - `features/[domain]` → feature modules (compose UI, wire hooks / server actions)
 - API: `fetchers/[domain]` (HTTP + Zod) + `hooks/[domain]` (Tanstack Query)
+- `providers/` → context + app-wide providers (`AppProviders`)
 - `hooks/` and `utils/` may be used by components and features
 - `lib/utils.ts` → shadcn `cn` helper (`clsx` + `twMerge`)
 - `i18n/` + `messages/` → locale config and catalogs

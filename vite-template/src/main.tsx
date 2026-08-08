@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { AppProviders } from "./components/shared/AppProviders/AppProviders";
+import { AppProviders } from "./providers/AppProviders/AppProviders";
 import { App } from "./pages/App";
 import "./i18n/setup";
 import "./index.css";

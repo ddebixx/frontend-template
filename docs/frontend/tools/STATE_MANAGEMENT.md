@@ -8,6 +8,8 @@ React **`useState` + Context** for:
 - Simple shared UI state
 - State that doesn’t update at high frequency
 
+Put Context providers (and other app-wide React providers) under `src/providers/`. Compose them in `AppProviders` and mount once from the app entry — not under `components/`.
+
 ## Escalate to Zustand when
 
 - Context re-renders become a performance problem

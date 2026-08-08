@@ -12,6 +12,7 @@ alwaysApply: false
 - Feature modules → `src/features/[domain]/` (same `*.types.ts` / `*.constants.ts` layout as components)
 - HTTP + Zod → `src/fetchers/[domain]/`
 - Tanstack Query hooks → `src/hooks/[domain]/` (usable from components and features)
+- Context + app-wide providers → `src/providers/` (compose in `AppProviders`)
 - shadcn `cn` → `src/lib/utils.ts`
 - Locale config → `src/i18n/`; catalogs → `src/messages/`
 - Global utils/types/constants → `src/utils`, `src/types`, `src/constants` (`utils` usable from components/features)
