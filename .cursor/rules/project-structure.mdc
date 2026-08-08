@@ -13,6 +13,7 @@ alwaysApply: false
 - HTTP + Zod → `src/fetchers/[domain]/`
 - Tanstack Query hooks → `src/hooks/[domain]/` (usable from components and features)
 - shadcn `cn` → `src/lib/utils.ts`
+- Locale config → `src/i18n/`; catalogs → `src/messages/`
 - Global utils/types/constants → `src/utils`, `src/types`, `src/constants` (`utils` usable from components/features)
 - E2E → `e2e/[domain]/[path].spec.ts`
 - Next.js routes → `src/app/`; Vite screens → `src/pages/`

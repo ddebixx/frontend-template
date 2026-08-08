@@ -1,0 +1,29 @@
+---
+description: No inline display strings — use locales or constants; i18n stack wiring
+globs: "**/*.{ts,tsx,jsx,js,json}"
+alwaysApply: false
+---
+
+# Copy & internationalization
+
+## No inline static display strings
+
+Do **not** put user-visible (or a11y) string literals in components, pages, or features.
+
+Move copy to either:
+
+1. **Locale catalogs** — `src/messages/*.json` via `t` / `getTranslations` (multi-locale)
+2. **Constants** — `*.constants.ts` or `src/constants/` (keeps UI files clear)
+
+The **project chooses** catalogs, constants, or a mix. Prefer catalogs when locales matter. Document a team default in the README if needed.
+
+OK as literals: class names, URLs, analytics ids, enums, test fixtures.
+
+## Stack (templates)
+
+- Next.js → `next-intl` (`src/i18n/request.ts` + `setLocale` cookie)
+- Vite → `i18next` + `react-i18next` (`src/i18n/setup.ts`)
+- Shared switcher: `components/shared/LocaleSwitcher`
+- Stable keys; `Intl`/library for dates, numbers, plurals; set document `lang`
+
+Details: `docs/frontend/tools/I18N.md`

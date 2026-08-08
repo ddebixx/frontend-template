@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "title": "Vite template",
+    "description": "OSS frontend standards example template"
+  },
+  "HomePage": {
+    "eyebrow": "OSS frontend standards",
+    "title": "Thanks for using this Vite template.",
+    "subtitle": "Have fun building."
+  },
+  "Common": {
+    "locale": "Language"
+  }
+}

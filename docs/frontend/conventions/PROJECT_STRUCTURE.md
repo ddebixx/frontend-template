@@ -38,6 +38,8 @@ src/
       useSomethingQuery.ts
   lib/
     utils.ts                     # shadcn `cn` helper
+  i18n/                          # locale config / wiring
+  messages/                      # locale catalogs (en.json, …)
   constants/
     [domain-name].ts
   types/
@@ -80,6 +82,8 @@ src/
     [domain-name]/
   lib/
     utils.ts
+  i18n/
+  messages/
   constants/
   types/
   utils/
@@ -95,4 +99,6 @@ src/
 - Pages/routes render features (or call `fetchers/` from server code) — they don’t create HTTP clients or Query instances
 - Components may use `hooks/` and `utils/` — they must not call `fetch` or build Query options inline
 - Shared utils/types/constants live under `src/utils`, `src/types`, `src/constants`
+- Locale wiring under `src/i18n/` (`config`, catalogs map, Next `request` / Vite `setup`); catalogs under `src/messages/` (see [I18N](../tools/I18N.md))
+- Shared `LocaleSwitcher` under `src/components/shared/LocaleSwitcher/`
 - Don’t invent new top-level folders without documenting them in this file

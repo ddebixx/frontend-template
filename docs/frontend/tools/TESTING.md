@@ -19,3 +19,5 @@ Test pyramid: many fast unit tests, fewer e2e tests on critical happy paths.
 ## Style
 
 Follow [Testing convention](../conventions/TESTING_CONVENTION.md) (Given/When/Then).
+
+Prefer accessible queries (`getByRole`, `getByLabelText`) over test IDs when the accessible name is stable.

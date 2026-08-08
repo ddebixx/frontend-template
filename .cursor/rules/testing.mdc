@@ -8,7 +8,7 @@ alwaysApply: false
 
 Pyramid: many unit tests, few e2e happy paths.
 
-Unit: Vitest + Testing Library, colocated `*.test.ts(x)`.
+Unit: Vitest + Testing Library, colocated `*.test.ts(x)`. Prefer `getByRole` / label queries.
 E2E: Playwright under `e2e/[domain]/`.
 
 Structure tests as Given / When / Then:

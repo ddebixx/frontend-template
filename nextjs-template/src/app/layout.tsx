@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import { Fraunces, Geist, Source_Sans_3 } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 import { AppProviders } from "@/components/shared/AppProviders/AppProviders";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -16,19 +17,25 @@ const sourceSans = Source_Sans_3({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Next.js template",
-  description: "OSS frontend standards example template",
-};
+export async function generateMetadata() {
+  const t = await getTranslations("Metadata");
 
-export default function RootLayout({
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={cn(
         "h-full",
         "antialiased",
@@ -39,7 +46,9 @@ export default function RootLayout({
       )}
     >
       <body className="flex min-h-full flex-col">
-        <AppProviders>{children}</AppProviders>
+        <NextIntlClientProvider>
+          <AppProviders>{children}</AppProviders>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

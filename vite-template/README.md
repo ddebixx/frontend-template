@@ -8,4 +8,4 @@ npm run dev
 npm run check
 ```
 
-Edit `src/pages/App.tsx`. Shared scripts: `lint`, `format`, `typecheck`, `test`, `test:e2e`, `fallow`.
+Edit `src/pages/App.tsx`. i18n: `i18next` + `react-i18next` with `src/messages/` + locale switcher. Shared scripts: `lint`, `format`, `typecheck`, `test`, `test:e2e`, `fallow`.

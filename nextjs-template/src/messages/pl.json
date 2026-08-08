@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "title": "Szablon Next.js",
+    "description": "Przykładowy szablon standardów frontendu OSS"
+  },
+  "HomePage": {
+    "eyebrow": "Standardy frontendu OSS",
+    "title": "Dziękujemy za użycie tego szablonu Next.js.",
+    "subtitle": "Miłego budowania."
+  },
+  "Common": {
+    "locale": "Język"
+  }
+}

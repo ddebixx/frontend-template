@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "title": "Next.js template",
+    "description": "OSS frontend standards example template"
+  },
+  "HomePage": {
+    "eyebrow": "OSS frontend standards",
+    "title": "Thanks for using this Next.js template.",
+    "subtitle": "Have fun building."
+  },
+  "Common": {
+    "locale": "Language"
+  }
+}

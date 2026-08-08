@@ -48,6 +48,6 @@ Minimal `example` samples under `src/components`, `src/features`, `src/fetchers`
 
 Start at [`docs/frontend/INDEX.md`](docs/frontend/INDEX.md).
 
-**Stack defaults:** TypeScript strict · Tailwind · Biome · Fallow · Vitest · Playwright · Tanstack Query · Zod · Context/`useState` first (Zustand when needed). No Storybook in this pack.
+**Stack defaults:** TypeScript strict · Tailwind + `cn`/`twMerge` · Biome · Fallow · Vitest · Playwright · Tanstack Query · Zod · Context/`useState` first (Zustand when needed) · a11y + i18n conventions. No Storybook in this pack.
 
 Copy `docs/frontend/`, `.cursor/rules/`, and optionally `AGENTS.md` into a project that is not forked from these templates.

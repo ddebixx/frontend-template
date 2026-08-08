@@ -7,12 +7,15 @@ alwaysApply: true
 
 This repo is a **Next.js App Router** or **Vite + React** frontend template.
 
-Defaults: TypeScript strict, Tailwind, Biome, Fallow, Vitest, Playwright, Tanstack Query + Zod.
+Defaults: TypeScript strict, Tailwind + `cn`/`twMerge`, Biome, Fallow, Vitest, Playwright, Tanstack Query + Zod.
 State: Context/`useState` first; Zustand only when justified.
+i18n + a11y are part of the standards (see INDEX).
 No Storybook in this template.
 
 Before finishing work:
 - Prefer existing folders under `src/` / `e2e/` (`features/`, `components/`, `fetchers/`, `hooks/`, …)
 - Keep lint/types/tests green
 - Validate API data with Zod in `fetchers/`
+- Use `cn` for Tailwind class merges; ship semantic, keyboard-accessible UI
+- No inline display strings in components/pages — use locale catalogs **or** `*.constants.ts` (project chooses)
 - See `docs/frontend/INDEX.md` for full standards

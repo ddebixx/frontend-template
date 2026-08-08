@@ -25,7 +25,10 @@ ComponentName/
 
 - Export props/types from `ComponentName.types.ts` — do not declare them in `ComponentName.tsx`
 - Export local constants from `ComponentName.constants.ts` — do not declare them in `ComponentName.tsx`
-- Prefer named exports for components, types, and constants
+- Prefer named exports for components, types, and constants — no `React.FC`
 - Keep UI presentational; put data fetching behind `hooks/` / `fetchers/` (usually via `features/`)
 - Feature modules under `src/features/[domain]/` follow the same folder rules
 - Colocate unit tests next to the unit under test
+- Compose classes with `cn` from `src/lib/utils.ts` (see [Styling](STYLING.md))
+- Meet [Accessibility](ACCESSIBILITY.md) for interactive UI
+- **No inline display strings** in the component file — use locale catalogs or `*.constants.ts` (team chooses; see [I18N](../tools/I18N.md))

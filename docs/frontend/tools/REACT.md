@@ -20,7 +20,19 @@
 
 ## Styling
 
-**Tailwind CSS** first. Avoid bespoke CSS files unless utilities can’t express the need.
+**Tailwind CSS** first. Merge classes with `cn` from `src/lib/utils.ts` (`clsx` + `twMerge`) — do not build `className` with fragile string ternaries/concat. Details: [Styling](../conventions/STYLING.md).
+
+## Components & hooks
+
+- Named exports only; no `React.FC`
+- Prefer Server Components (Next); `"use client"` only when required
+- Named inner functions inside `useEffect`; prefer derived state over syncing props into state
+
+Details: [Engineering practices](../conventions/ENGINEERING.md).
+
+## Accessibility & i18n
+
+Ship semantic, keyboard-usable UI ([Accessibility](../conventions/ACCESSIBILITY.md)). Localize user-facing copy ([I18N](I18N.md)).
 
 ## Not included
 

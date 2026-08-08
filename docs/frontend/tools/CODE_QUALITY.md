@@ -18,6 +18,8 @@ Config: `.fallowrc.json`. Cache lives in `.fallow/` (gitignored).
 - CI must fail on: build, lint, typecheck, unit, e2e
 - Aggregate script: `pnpm check` / `npm run check` (includes Fallow)
 
+
+
 ## Definition of done (PR)
 
 - [ ] Biome clean
@@ -25,3 +27,6 @@ Config: `.fallowrc.json`. Cache lives in `.fallow/` (gitignored).
 - [ ] Unit tests updated
 - [ ] E2E happy path if user flow changed
 - [ ] Fallow clean (or justified exceptions)
+- [ ] Accessibility: semantic controls, labels/names, keyboard path for new interactive UI
+- [ ] No inline display strings in components/pages — copy in locale catalogs **or** constants (project chooses)
+- [ ] Classes merged with `cn` / `twMerge` (no ad-hoc Tailwind string ternaries)

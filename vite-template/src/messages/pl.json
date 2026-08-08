@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "title": "Szablon Vite",
+    "description": "Przykładowy szablon standardów frontendu OSS"
+  },
+  "HomePage": {
+    "eyebrow": "Standardy frontendu OSS",
+    "title": "Dziękujemy za użycie tego szablonu Vite.",
+    "subtitle": "Miłego budowania."
+  },
+  "Common": {
+    "locale": "Język"
+  }
+}

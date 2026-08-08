@@ -1,0 +1,16 @@
+---
+description: Engineering practices — SRP, named exports, useEffect, errors
+globs: "**/*.{ts,tsx,js,jsx}"
+alwaysApply: false
+---
+
+# Engineering practices
+
+- One responsibility per function/component; prefer ≤ ~20 lines / ≤ 2 indents
+- Named exports only — no default exports for app code; no `React.FC`
+- Prefer derived values over storing props/computed data in state
+- `useEffect`: extract a **named inner function**; keep deps complete
+- Separated `try`/`catch`; avoid returning `null`/`undefined` when a clearer type exists
+- Pure helpers in `src/utils`; comment **why**, not what
+
+Details: `docs/frontend/conventions/ENGINEERING.md`

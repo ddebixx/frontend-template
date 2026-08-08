@@ -1,0 +1,24 @@
+---
+description: Tailwind class composition via cn (clsx + twMerge), not string ternaries
+globs: "**/*.{tsx,jsx,css}"
+alwaysApply: false
+---
+
+# Styling
+
+Use `cn` from `src/lib/utils.ts` (`clsx` + `twMerge`) for all conditional / merged `className`s.
+
+```tsx
+// ❌ String ternary / concat
+className={`px-4 ${isActive ? "bg-primary" : "bg-muted"} ${className}`}
+
+// ✅ cn resolves conflicts and conditionals
+className={cn("px-4", isActive ? "bg-primary" : "bg-muted", className)}
+```
+
+- Always merge consumer `className` through `cn`
+- Prefer `isX && "utility"` or small ternaries **inside** `cn`, not outside
+- Many visual variants → `cva` / variant maps, not nested ternaries
+- Tailwind utilities first; bespoke CSS only when needed
+
+Details: `docs/frontend/conventions/STYLING.md`
