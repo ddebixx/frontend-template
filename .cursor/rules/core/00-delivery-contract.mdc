@@ -1,0 +1,21 @@
+---
+description: Spec-first gate for non-trivial changes. Procedures live in skills.
+alwaysApply: true
+---
+
+# Delivery contract
+
+Rules constrain implementation. Skills run workflows. Reviewer subagents stay read-only.
+
+For non-trivial work, do not implement until this sequence exists:
+
+`request -> spec -> critique -> implementation plan -> implementation -> verification`
+
+- Use `spec-driven-development`. Keep the spec in the repo (`docs/specs/<task-slug>.md` unless a local convention exists). Must-pass acceptance criteria are testable before coding.
+- Send the spec to `spec-critic` before implementation. Send architecture-sensitive plans to `architecture-critic` before implementation.
+- For meaningful UI/UX, use `frontend-design-quality`, add design acceptance criteria, and after a render exists send it to `design-critic`.
+- After implementation, use `acceptance-verification` or `qa-verifier`. Do not claim completion until every must-pass criterion has evidence and no blocking reviewer finding remains.
+- Reviewers report findings. The implementing agent fixes them and requests a fresh verification pass.
+- If implementation reveals a new requirement or product decision, update the spec before coding that behavior. Code must not become the source of truth over the approved spec.
+
+Skip this only for genuinely trivial edits: copy, typos, formatting, or an obvious isolated fix with no behavioral, contract, UX, data, architecture, dependency, or regression risk. When uncertain, write a compact spec.

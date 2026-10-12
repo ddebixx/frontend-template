@@ -1,0 +1,3 @@
+interface:
+  display_name: "Cursor Rule Refactor"
+  short_description: "Refactor Cursor rules into lean rules, skills, agents, and docs."

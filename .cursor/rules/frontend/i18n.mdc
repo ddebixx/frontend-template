@@ -1,0 +1,29 @@
+---
+description: No inline display strings — use locales or constants; i18n stack wiring
+globs: "src/**/*.ts, src/**/*.tsx, src/**/*.js, src/**/*.jsx, src/**/*.json, nextjs-template/src/**/*.ts, nextjs-template/src/**/*.tsx, nextjs-template/src/**/*.js, nextjs-template/src/**/*.jsx, nextjs-template/src/**/*.json, vite-template/src/**/*.ts, vite-template/src/**/*.tsx, vite-template/src/**/*.js, vite-template/src/**/*.jsx, vite-template/src/**/*.json"
+alwaysApply: false
+---
+
+# Copy and internationalization
+
+## No inline static display strings
+
+Do not put user-visible or accessibility string literals in components, pages, or features.
+
+Move copy to either:
+
+1. Locale catalogs — `src/messages/*.json` via `t` / `getTranslations` (multi-locale)
+2. Constants — `*.constants.ts` or `src/constants/` (keeps UI files clear)
+
+The project chooses catalogs, constants, or a mix. Prefer catalogs when locales matter. Document a team default in the README if needed.
+
+Literals are fine for class names, URLs, analytics ids, enums, and test fixtures.
+
+## Stack (templates)
+
+- Next.js → `next-intl` (`src/i18n/request.ts` + `setLocale` cookie)
+- Vite → `i18next` + `react-i18next` (`src/i18n/setup.ts`)
+- Shared switcher: `components/shared/LocaleSwitcher`
+- Stable keys; `Intl` or the library for dates, numbers, and plurals; set document `lang`
+
+Details: `docs/frontend/tools/I18N.md`

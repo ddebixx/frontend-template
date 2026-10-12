@@ -1,0 +1,17 @@
+---
+description: Engineering practices — SRP, named exports, useEffect, errors
+globs: "src/**/*.ts, src/**/*.tsx, src/**/*.js, src/**/*.jsx, nextjs-template/src/**/*.ts, nextjs-template/src/**/*.tsx, nextjs-template/src/**/*.js, nextjs-template/src/**/*.jsx, vite-template/src/**/*.ts, vite-template/src/**/*.tsx, vite-template/src/**/*.js, vite-template/src/**/*.jsx"
+alwaysApply: false
+---
+
+# Engineering practices
+
+- One responsibility per function or component. Prefer about 20 lines and two levels of indentation.
+- Named exports only for components, hooks, and utils. No `React.FC`. Type props on the function.
+- Use a default export only where the framework requires it: Next.js route modules (`page`, `layout`, `loading`, `error`, `not-found`, `template`, `default`) and `src/i18n/request.ts`.
+- Prefer derived values. Do not store props or computed data in state.
+- In `useEffect`, call a named inner function and list every dependency.
+- Keep `try` / `catch` separate from the happy path. Do not return `null` or `undefined` when a clearer type exists.
+- Put pure helpers in `src/utils`. Comments explain why, not what.
+
+Details: `docs/frontend/conventions/ENGINEERING.md`

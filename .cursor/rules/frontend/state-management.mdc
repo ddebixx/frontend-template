@@ -1,0 +1,20 @@
+---
+description: When to use Context versus Zustand in app code
+globs: "src/**/*.ts, src/**/*.tsx, nextjs-template/src/**/*.ts, nextjs-template/src/**/*.tsx, vite-template/src/**/*.ts, vite-template/src/**/*.tsx"
+alwaysApply: false
+---
+
+# State
+
+Default to `useState` and Context for simple shared state.
+
+Use Zustand only when at least one of these is true:
+
+- Context re-renders hurt performance
+- State must persist
+- Middleware is required
+- Global state has many actions
+
+Justify Zustand in the PR description.
+
+Details: `docs/frontend/tools/STATE_MANAGEMENT.md`

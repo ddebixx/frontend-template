@@ -1,0 +1,25 @@
+---
+description: Enforce specification-first delivery and independent quality gates for non-trivial changes.
+alwaysApply: true
+---
+
+# Spec-first workflow gate
+
+Treat project rules as implementation constraints and skills as execution workflows.
+
+For any non-trivial change:
+
+1. Do not start implementation until an explicit spec exists and its must-pass acceptance criteria are testable.
+2. Use the `spec-driven-development` skill to create or update the spec and implementation plan.
+3. Keep the spec in the repository. Prefer the repository's existing convention; otherwise use `docs/specs/<task-slug>.md`.
+4. Delegate specification challenge to `spec-critic` before implementation.
+5. Delegate architecture-sensitive plans to `architecture-critic` before implementation.
+6. For meaningful UI/UX work, use `frontend-design-quality` and include design-specific acceptance criteria.
+7. After implementation, use `acceptance-verification` or delegate to `qa-verifier`.
+8. For meaningful UI/UX work, also delegate the rendered result to `design-critic`.
+9. Reviewer subagents are read-only. They report findings; the primary agent performs fixes afterward and requests a fresh verification pass.
+10. Do not claim completion until all must-pass acceptance criteria have evidence and no blocking reviewer finding remains.
+
+A change may skip the full workflow only when it is genuinely trivial: copy/typo/formatting-only work, or an obvious isolated fix with no meaningful behavioral, contract, UX, data, architecture, dependency, or regression risk. When uncertain, create a compact spec.
+
+If implementation reveals a new requirement or product decision, update the spec before coding that behavior. Never let code silently become the source of truth over the approved specification.

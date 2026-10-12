@@ -1,0 +1,24 @@
+---
+description: Folder layout for Next.js App Router and Vite + React variants
+globs: "src/**/*, e2e/**/*, nextjs-template/src/**/*, nextjs-template/e2e/**/*, vite-template/src/**/*, vite-template/e2e/**/*"
+alwaysApply: false
+---
+
+# Project structure
+
+- shadcn UI → `src/components/ui/` (primitives only)
+- Domain presentational UI → `src/components/[domain]/`
+- Shared UI (≥2 domains) → `src/components/shared/`
+- Feature modules → `src/features/[domain]/` (same `*.types.ts` / `*.constants.ts` layout as components; compose UI and wire hooks, fetchers, and Next.js server actions)
+- HTTP + Zod → `src/fetchers/[domain]/`
+- Tanstack Query hooks → `src/hooks/[domain]/` (usable from components and features)
+- Context + app-wide providers → `src/providers/` (compose in `AppProviders`)
+- shadcn `cn` → `src/lib/utils.ts`
+- Locale config → `src/i18n/`; catalogs → `src/messages/`
+- Global utils/types/constants → `src/utils`, `src/types`, `src/constants` (`utils` usable from components and features)
+- E2E → `e2e/[domain]/[path].spec.ts`
+- Next.js routes → `src/app/`; Vite screens → `src/pages/`
+
+Do not call Tanstack Query or `fetch` directly from components. Go through `hooks` / `fetchers`, usually via a feature.
+
+Details: `docs/frontend/conventions/PROJECT_STRUCTURE.md`

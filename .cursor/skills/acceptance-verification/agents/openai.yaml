@@ -1,0 +1,3 @@
+interface:
+  display_name: "Acceptance Verification"
+  short_description: "Verify implementation against explicit acceptance criteria and evidence"

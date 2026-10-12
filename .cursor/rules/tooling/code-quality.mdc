@@ -1,0 +1,14 @@
+---
+description: Biome, Fallow, and CI quality expectations for app code and tool config
+globs: "src/**/*.ts, src/**/*.tsx, src/**/*.js, src/**/*.jsx, nextjs-template/src/**/*.ts, nextjs-template/src/**/*.tsx, nextjs-template/src/**/*.js, nextjs-template/src/**/*.jsx, vite-template/src/**/*.ts, vite-template/src/**/*.tsx, vite-template/src/**/*.js, vite-template/src/**/*.jsx, biome.json, nextjs-template/biome.json, vite-template/biome.json, .fallowrc.json, nextjs-template/.fallowrc.json, vite-template/.fallowrc.json"
+alwaysApply: false
+---
+
+# Code quality
+
+- Format and lint with Biome. Do not mix ESLint and Prettier on the same tree unless that mix is documented.
+- Run Fallow (`fallow dead-code`) for unused exports and dependencies as part of `check`.
+- No unexplained `any` or `@ts-ignore`.
+- Keep `build`, `lint`, `typecheck`, `test`, and `test:e2e` green in CI.
+
+Details: `docs/frontend/tools/CODE_QUALITY.md`

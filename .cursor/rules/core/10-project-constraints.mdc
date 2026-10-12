@@ -1,0 +1,18 @@
+---
+description: Template identity, locked default stack, and the finish bar.
+alwaysApply: true
+---
+
+# Project constraints
+
+This repository is a **Next.js App Router** or **Vite + React** frontend template. Do not replace that choice or add a second app framework inside one variant.
+
+Do not swap the default stack unless the task explicitly changes it: TypeScript strict, Tailwind with `cn` (`clsx` + `twMerge`), Biome, Fallow, Vitest, Playwright, Tanstack Query, Zod, and React Context / `useState` before Zustand.
+
+Do not add Storybook or a second component library. UI primitives are shadcn/ui.
+
+Internationalization and accessibility are in scope for UI. Follow their file-scoped rules.
+
+Add files under the existing `src/` and `e2e/` layout. Do not invent parallel top-level folders. Folder roles are in the project-structure rule and `docs/frontend/INDEX.md`.
+
+Do not finish a code change while lint, types, or tests are failing.

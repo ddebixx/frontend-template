@@ -1,0 +1,26 @@
+---
+description: Encapsulate component and feature folders; keep the UI file free of types and constants
+globs: "src/components/**/*, src/features/**/*, nextjs-template/src/components/**/*, nextjs-template/src/features/**/*, vite-template/src/components/**/*, vite-template/src/features/**/*"
+alwaysApply: false
+---
+
+# Components
+
+- Encapsulate component-only types, utils, and constants inside the component folder.
+- Keep `ComponentName.tsx` UI-only. Export types from `ComponentName.types.ts` and constants from `ComponentName.constants.ts`.
+- Create sibling files only when they have content.
+- Nest subcomponents so the folder tree mirrors the UI tree.
+- Use the same layout under `src/features/`.
+- Keep presentational UI in `components/`. Compose UI and wire data in `features/`.
+
+```txt
+ComponentName/
+  ComponentName.tsx
+  ComponentName.types.ts
+  ComponentName.constants.ts   # omit if none
+  ComponentName.test.ts
+  utils/                       # optional
+  SubComponent/                # optional
+```
+
+Details: `docs/frontend/conventions/COMPONENT_STRUCTURE.md`

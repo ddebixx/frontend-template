@@ -1,0 +1,14 @@
+---
+description: React runtime rules for Next.js App Router and Vite screens
+globs: "src/**/*.tsx, src/**/*.jsx, nextjs-template/src/**/*.tsx, nextjs-template/src/**/*.jsx, vite-template/src/**/*.tsx, vite-template/src/**/*.jsx"
+alwaysApply: false
+---
+
+# React
+
+- Functional components only.
+- Next.js files under `src/app/` are Server Components by default. Add `"use client"` only when the file needs state, effects, browser APIs, or event handlers.
+- Vite screens under `src/pages/` are client components.
+- Move shared interactive logic into a hook. Do not copy it across components.
+
+Details: `docs/frontend/tools/REACT.md`

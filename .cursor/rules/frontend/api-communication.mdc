@@ -1,0 +1,20 @@
+---
+description: Fetchers, Tanstack Query hooks, and Zod validation for API layers
+globs: "src/fetchers/**/*, src/hooks/**/*, nextjs-template/src/fetchers/**/*, nextjs-template/src/hooks/**/*, vite-template/src/fetchers/**/*, vite-template/src/hooks/**/*"
+alwaysApply: false
+---
+
+# API communication
+
+- Fetchers under `fetchers/[domain]/` — typed HTTP plus Zod schemas and parse, no React
+- Hooks under `hooks/[domain]/` — Tanstack Query wrapping fetchers; components may import them
+- Pure mapping helpers under `utils/[domain]/` — usable from fetchers and components
+- Export types via `z.infer<typeof Schema>`
+- Never trust a raw response shape in UI code
+
+```ts
+const UserSchema = z.object({ id: z.string(), name: z.string() });
+export type User = z.infer<typeof UserSchema>;
+```
+
+Details: `docs/frontend/tools/API_COMMUNICATION.md`

@@ -1,0 +1,20 @@
+---
+description: Accessibility requirements for UI — semantic HTML, keyboard, names
+globs: "src/**/*.tsx, src/**/*.jsx, nextjs-template/src/**/*.tsx, nextjs-template/src/**/*.jsx, vite-template/src/**/*.tsx, vite-template/src/**/*.jsx"
+alwaysApply: false
+---
+
+# Accessibility (a11y)
+
+WCAG 2.2 AA intent. Prefer semantic HTML over `aria-*` patches.
+
+- Use real controls (`button`, `a`, `label`, landmarks, headings). Do not put action click handlers on `div` or `span`.
+- Every interactive control has an accessible name (visible text, `aria-label`, or `aria-labelledby`).
+- Icon-only buttons: translated `aria-label`. Decorative icons: `aria-hidden`.
+- Forms: associate labels and errors (`htmlFor`, `aria-describedby`, `aria-invalid`).
+- Keyboard: Tab, Enter, Space, and Escape match pointer behavior; focus is visible; focus is not trapped.
+- Dialogs and menus: use shadcn/Radix when possible so focus management is built in.
+- Do not convey meaning by color alone.
+- Respect `prefers-reduced-motion` for non-essential animation.
+
+Details: `docs/frontend/conventions/ACCESSIBILITY.md`
